@@ -1,0 +1,137 @@
+.my-orders {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .my-orders h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .my-orders-order {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px;
+    gap: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .my-orders-order:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .my-orders-order img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-self: center;
+  }
+  
+  .my-orders-order p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .my-orders-order p span {
+    color: #27ae60;
+  }
+  
+  .my-orders-order .FaIndianRupeeSign {
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .my-orders-order p.price {
+    font-weight: bold;
+    color: #e67e22;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .my-orders-order p.price svg {
+    margin-right: 4px;
+  }
+  
+  .my-orders-order p:last-of-type {
+    text-align: right;
+  }
+  
+  .my-orders-order button {
+    grid-column: span 3;
+    padding: 8px 20px;
+    font-size: 14px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .my-orders-order button:hover {
+    background-color: #1e6a93;
+    transform: scale(1.05);
+  }
+  
+  .my-orders-order button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .my-orders {
+      padding: 15px;
+    }
+  
+    .my-orders-order {
+      grid-template-columns: 40px 1fr 80px;
+    }
+  
+    .my-orders-order img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .my-orders-order button {
+      padding: 6px 15px;
+      font-size: 12px;
+    }
+  
+    .my-orders-order p.price {
+      font-size: 14px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

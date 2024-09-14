@@ -1,0 +1,102 @@
+.header {
+    height: 35vw;
+    margin: 30px auto;
+    background: url("https://ca-times.brightspotcdn.com/dims4/default/91bea82/2147483647/strip/true/crop/5127x3417+297+0/resize/2000x1333!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F79%2Fdc%2F4d29255545f5b9813315901692bc%2F1459972-fo-azizam-review20-eba.JPG") no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 30px;
+  }
+  
+  .header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 50%;
+    left: 8vw;
+    animation: fadeIn 2s;
+  }
+  
+  .header-contents h2 {
+    font-size: 2.5vw;
+    color: rgb(31, 33, 34);
+    font-weight: 700;
+  }
+  
+  .header-contents p {
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 500;
+  }
+  
+  .header-contents button {
+    border: 2px solid rgb(2, 4, 5);
+    color: rgb(5, 5, 5);
+    font-weight: 700;
+    padding: 1vw 1.5vw;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 1vw;
+    width: 150px; 
+    font-size: 16px;
+     overflow: hidden;
+  }
+  
+  .header-contents button:hover {
+    cursor: pointer;
+    background: rgba(247, 144, 11, 0.281);
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      height: 50vw;
+    }
+  
+    .header-contents {
+      max-width: 60%;
+      bottom: 40%;
+      left: 5vw;
+    }
+  
+    .header-contents h2 {
+      font-size: 4vw;
+    }
+  
+    .header-contents p {
+      font-size: 2vw;
+    }
+  
+    .header-contents button {
+      font-size: 2vw;
+      padding: 1.5vw 2vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      height: 60vw;
+    }
+  
+    .header-contents {
+      max-width: 80%;
+      bottom: 30%;
+      left: 4vw;
+      gap: 3vw;
+    }
+  
+    .header-contents h2 {
+      font-size: 5vw;
+    }
+  
+    .header-contents p {
+      font-size: 3vw;
+    }
+  
+    .header-contents button {
+      font-size: 3vw;
+      padding: 2vw 3vw;
+    }
+  }
+  

@@ -1,0 +1,274 @@
+body {
+  background: linear-gradient(135deg, #f0f2f5, #777774); 
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh; 
+  width: 100vw; 
+  background-attachment: fixed; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.logo {
+  font-size: 48px;
+  font-family: 'Poppins', sans-serif;
+  width: 150px;
+}
+
+.navbar-right {
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 25px;
+  font-weight: 800;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navbar-menu li:hover {
+  color: rgb(61, 61, 59);
+}
+
+.navbar-right i:hover {
+  color: rgb(77, 78, 80);
+}
+
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #5753528e;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+/* General styling for larger screens */
+.navbar-profile {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.navbar-profile img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-profile img:hover {
+  transform: scale(1.05);
+  border-color: #ddd;
+}
+
+.nav-profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.1);
+  z-index: 1;
+  width: 180px;
+  border-radius: 12px;
+  padding: 8px 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-profile-dropdown li {
+  padding: 12px 16px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.nav-profile-dropdown li img {
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+}
+
+.nav-profile-dropdown li p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.nav-profile-dropdown li:hover {
+  background-color: #f9f9f9;
+  color: #bc891a;
+}
+
+hr {
+  margin: 0;
+  border: 0.5px solid #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-profile img {
+    width: 36px;  /* Smaller profile icon for mobile */
+    height: 36px;
+  }
+  
+  .navbar-profile {
+    margin-top: 2px;  /* Slight adjustment for better alignment on mobile */
+  }
+  
+  .nav-profile-dropdown {
+    width: 160px;  /* Adjust width for smaller screens */
+    top: 45px;  /* Move dropdown up slightly for mobile alignment */
+  }
+
+  .nav-profile-dropdown li {
+    padding: 10px 12px;  /* Less padding for a more compact mobile view */
+  }
+
+  .nav-profile-dropdown li img {
+    width: 20px;  /* Smaller icons for mobile */
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .nav-profile-dropdown li p {
+    font-size: 12px;  /* Slightly smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-profile img {
+    width: 32px;  /* Further reduce size on very small screens */
+    height: 32px;
+  }
+  
+  .nav-profile-dropdown {
+    width: 150px;  /* Even smaller dropdown for very small screens */
+  }
+
+  .nav-profile-dropdown li {
+    padding: 8px 10px;  /* Compact padding for better spacing */
+  }
+
+  .nav-profile-dropdown li p {
+    font-size: 11px;  /* Adjust font size for readability on small screens */
+  }
+}
+
+
+@keyframes colorChangeMeal {
+  0% { color: #bc891a; } /* Teal */
+  50% { color: #bc891a; } /* Coral */
+  100% { color: rgb(46, 47, 48); }
+}
+
+@keyframes colorChangeMate {
+  0% { color: #bc891a; } /* Coral */
+  50% { color: rgb(46, 47, 48); } /* Teal */
+  100% { color: #bc891a; }
+}
+
+.greenToRed {
+  animation: colorChangeMeal 2s infinite;
+}
+
+.redToGreen {
+  animation: colorChangeMate 2s infinite;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .logo {
+    font-size: 36px; 
+    width: auto; 
+  }
+
+  .navbar-menu {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start; 
+  }
+
+  .navbar-menu.active {
+    display: flex; 
+  }
+
+  .navbar-right {
+    font-size: 24px;
+    gap: 10px; 
+  }
+
+  .navbar button {
+    font-size: 18px; 
+    padding: 8px 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    font-size: 20px; 
+  }
+
+  .navbar-right {
+    font-size: 20px; 
+  }
+}

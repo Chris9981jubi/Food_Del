@@ -1,0 +1,47 @@
+.app-download {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+  
+  .app-download p {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .app-download-platform {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .store-image {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .store-image:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 600px) {
+    .app-download p {
+      font-size: 16px;
+    }
+  
+    .app-download-platform {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .app-download-platform img {
+      width: 80%;
+      margin: 10px 0;
+    }
+  }
+  

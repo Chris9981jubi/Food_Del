@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 0 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .admin-section {
+    text-align: center;
+  }
+  
+  .admin-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #555;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .meal {
+    color: darkorange;
+  }
+  
+  .mate {
+    color: black;
+  }
+  
+  .profile-pic img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
