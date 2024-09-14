@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
         const savedCart = localStorage.getItem("cartItems");
         return savedCart ? JSON.parse(savedCart) : {};
     });
-    const url ="http://localhost:4000"
+    const url ="https://food-delivery-back-lr81.onrender.com"
     const [token,setToken]=useState("");
     const[food_list, setFoodlist]= useState([])
 
