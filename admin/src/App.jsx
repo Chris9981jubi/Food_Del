@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import SideBar from './components/SideBar/SideBar.jsx';
+import SideBar from './components/Sidebar/SideBar.jsx';
 import { Routes, Route } from "react-router-dom";
 import Add from "./Pages/Add/Add.jsx";
 import List from "./Pages/List/List.jsx";
